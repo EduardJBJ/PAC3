@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invocar Pokemons</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script defer src="assets/javascript/script.js"></script>
+</head>
+<body>
+    <div class="boxprincipal">
+        <nav class="navprincipal">
+            <figure class="esquerra">
+                <abbr title="Invocar Pokemons"><a href="index.html">
+                    <img class="imgesquerra" src="assets/imatges/invpok1.jpg" onmouseout="this.src='assets/imatges/invpok1.jpg'" onmouseover="this.src='assets/imatges/invpok2.jpg'" alt="invocar pokemons">
+                </a></abbr>
+            </figure>
+            <p class="textdreta"><strong>Invocar 10 Pokemons</strong></p>
+            <figure class="dreta">
+                <p class="buscID"><a href="?ID=" target="_self">Buscar per ID</a></p>
+                <abbr title="Tornar"><a href="javascript:history.back()">
+                    <img class="imgdreta" src="assets/imatges/icoBack.jpg" alt="tornar enrerra">
+                </a></abbr>
+            </figure>
+            <div class="controls">
+                <label for="rfosc"><small>Tema Fosc</small></label>
+                <input type="radio" name="tema" id="rfosc" value="fosc">
+                <label for="rclar"><small>Tema Clar</small></label>
+                <input type="radio" name="tema" id="rclar" value="clar">
+            </div>
+            <div class="boxbuscar">
+                <form class="buscar">
+                    <abbr title="Filtrar Pokemons pel Nom - (Esc) per tornar">
+                        <input class="buscarInput" type="text" placeholder="  Escriviu el nom del Pokemon a filtrar...Esc per tornar"/>
+                    </abbr>
+                  </form>
+            </div>
+            <p class="senseUrl">Sense paràmetres a la URL</p>
+        </nav>
+        <div class="plantilla" id="plantilla">
+        </div>
+    </div>
+</body>
+</html>

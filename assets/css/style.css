@@ -1,0 +1,190 @@
+
+:root {
+--bxShadow: 5px 5px 10px rgba(255, 255, 255, 0.7);
+}
+
+*{
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+}
+  
+html {
+scroll-behavior: smooth;
+}
+  
+body {
+font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+}
+
+.boxprincipal{
+display: flex;
+flex-direction: column;
+margin: auto;
+max-width: 1000px;
+}
+
+.navprincipal{
+display: grid;
+grid-template-columns: 1fr 4fr 1fr;
+width: 100%;
+padding: 5px;
+background-color: black;
+border-radius: 15px;
+}
+
+.esquerra{
+text-align: left;
+}
+
+.imgesquerra, .imgdreta{
+width: 40px;
+height: 40px;
+}
+
+.textdreta{
+font: bold 30px segoe print, Arial, Helvetica, sans-serif;
+color: white;
+}
+
+.dreta{
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+
+.buscID a{
+text-decoration: none;
+font: 15px segoe print, Arial, Helvetica, sans-serif;
+color: white;   
+}
+
+.buscID a:hover{
+color: rgb(248, 9, 9);   
+}
+
+.controls{
+grid-column-start: 1;
+grid-column-end: 4;
+width: 100%;
+color: white;
+}
+
+.boxbuscar{
+grid-column-start: 1;
+grid-column-end: 4;
+color: white;
+background-color: black;
+border-radius: 5px;
+margin-top: 10px;
+}
+
+.buscar {
+position: relative;
+align-items: center;
+}
+
+.buscarInput {
+font-size: 14px;
+width: 35%;
+height: 30px;
+border: 0px;
+padding: 8px 0;
+border-radius: 5px;
+}
+
+.buscarInput:hover {
+background-color: rgba(200, 248, 238, 0.9);
+border: 1px solid red;
+}
+
+.senseUrl{
+grid-column-start: 1;
+grid-column-end: 4;
+font: 15px segoe print, Arial, Helvetica, sans-serif;
+color: white;
+text-align: center;
+}
+
+/* també és el flip-container*/
+.plantilla{
+perspective: 1000px;
+display: flex;
+flex-wrap: wrap;
+gap: 5px;
+justify-content: space-evenly;
+border-radius: 15px;
+padding: 20px 0px;
+}
+
+.pokemon {
+position: relative;
+display: flex;
+flex-direction: column;
+width: 250px;
+height: 250px;
+padding-top: 15px;
+border-radius: 15px;
+margin: 10px;
+transition: 0.6s;
+transform-style: preserve-3d;
+transform-origin: center;
+box-shadow: var(--bxShadow);
+}
+
+.pokemon.clar{
+--bxShadow: 5px 5px 10px rgba(207, 207, 207, 0.7);
+}
+
+.pokemon.fosc{
+--bxShadow: 5px 5px 10px rgba(255, 255, 255, 0.7);
+}
+
+.pokemon:hover, .pokemon.flip{
+transform: rotateY(180deg);
+}
+
+.davant, .darrera{
+width: 100%;
+height: 100%;
+position: absolute;
+backface-visibility: hidden;
+}
+
+.davant{
+transform: rotateY(0deg);
+z-index: 2;
+}
+
+.darrera{
+transform: rotateY(180deg);
+}
+
+.pokemon img {
+background-color: rgba(255, 255, 255, 0.6);
+border-radius: 50%;
+width: 120px;
+height: 120px;
+}
+
+.numID{
+font: bold 15px segoe print, Arial, Helvetica, sans-serif;
+}
+
+.nameP{
+font: bold 20px Arial, Helvetica, sans-serif;
+}
+
+.tipusP{
+font: 15px segoe print, Arial, Helvetica, sans-serif;
+}
+
+.atacP, .defensaP{
+font: bold 20px segoe print, Arial, Helvetica, sans-serif;
+}
+
+.filtreBusc{
+display: none;
+}
+
